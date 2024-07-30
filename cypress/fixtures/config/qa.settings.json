@@ -1,9 +1,7 @@
 {
   "baseUrl": "https://web.superfrete.com/",
   "env": {
-    "loginUrl": "https://login-qa-origin.bionexo.com/",
     "email": "automationplataform@bionexo.com",
-    "password": "Bio@1234",
-    "wsUrl": "https://ws-bionexo-qa-origin.bionexo.com/ws2/BionexoBean?wsdl"
+    "password": "Bio@1234"
   }
 }
