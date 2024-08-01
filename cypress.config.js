@@ -2,8 +2,13 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
+  
+    defaultCommandTimeout: 20000, // 20 segundos
+    pageLoadTimeout: 60000, // 60 segundos
+    requestTimeout: 5000, // 5 segundos
+    responseTimeout: 30000,
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+  
       // implement node event listeners here
       const environmentValue = process.env.NODE_ENV || config.env.environmentName || 'qa';
 
@@ -21,12 +26,14 @@ module.exports = defineConfig({
           ...config.env,
           ...settings.env,
         };
+        
       }
       return config;
 
     },
-    "viewportWidth": 1920,
-  "viewportHeight": 1080,
-  "defaultCommandTimeout": 20000 ,
+    testIsolation: false, 
+      "viewportWidth": 1366,
+    "viewportHeight": 768,
   },
+  video: true,
 });
